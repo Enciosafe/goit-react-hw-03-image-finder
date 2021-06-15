@@ -3,11 +3,6 @@ import s from "./Searchbar.module.css"
 
 const Searchbar = ({state: {queryWord}, handleChange, onSearch}) => {
 
-
-
-
-
-
     return <header className={s.searchbar}>
             <form className={s.searchForm}>
                 <button onClick={onSearch} type="submit" className={s.searchFormButton}>

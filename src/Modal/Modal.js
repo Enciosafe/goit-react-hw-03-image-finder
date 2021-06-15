@@ -6,11 +6,9 @@ const modalRoot = document.querySelector('#modal-root')
 
 export default class Modal extends React.Component {
 
-
     componentDidMount() {
         window.addEventListener('keydown', this.handleKeyDown )
     }
-
     componentWillUnmount() {
         window.removeEventListener('keydown', this.handleKeyDown)
     }
@@ -29,13 +27,10 @@ export default class Modal extends React.Component {
     }
 
     render() {
-        console.log(this.props)
         return createPortal (
-
             <div className={s.Overlay} onClick={this.handleOverlayClick} >
                 <div className={s.Modal}>
-                    <img src={this.props.bigPicUrl} alt=""/>
-                    <h2>{this.props.bigPicUrl}</h2>
+                    <img src={this.props.bigPickUrl} alt={this.props.bigPickUrl.id}/>
                 </div>
             </div>, modalRoot
         );

@@ -3,12 +3,12 @@ import s from "./ImageGalleryItem.module.css"
 
 
 
-const ImageGalleryItem = ({state, toggleModal}) => {
+const ImageGalleryItem = ({data}) => {
 
         return <>
-            {state.data.map(({id, webformatURL, largeImageURL}) => (
+            {data.map(({id, webformatURL, tags}) => (
                 <li key={id} className={s.imageGalleryItem}>
-                    <img onClick={toggleModal} src={webformatURL} alt={largeImageURL} className={s.imageGalleryItemImage} />
+                    <img src={webformatURL} alt={tags} className={s.imageGalleryItemImage} />
                 </li>
             ))}
         </>

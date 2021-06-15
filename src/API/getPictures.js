@@ -10,4 +10,4 @@ const fetchOn = ({queryWord = '', pageNumber = 1, itemsPerPage = 12}) => {
         .then(response => response.data)
 }
 
-export default {fetchOn}
+export default fetchOn
